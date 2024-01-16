@@ -1,4 +1,5 @@
-function [dataLowNoise, dataHighNoise] = RunVarianceWorkingMemoryVersion(unitTest, cBal, day)
+
+ function [dataLowNoise, dataHighNoise] = RunVarianceWorkingMemoryVersion(unitTest, cBal, day)
 %RUNVARIANCEWORKINGMEMORY This function runs the first Gläscher version of
 %   WMV including variance change points and working memory manipulations
 %
@@ -57,13 +58,13 @@ end
 % ----------------------------
 
 % Set number of trials for experiment
-trialsExp = 10; % 200;  Hier bitte anpassen
+trialsExp = 30; % 200;  Hier bitte anpassen
 
 % Set number of trials for integration test
 trialsTesting = 20;
 
 % Number of practice trials
-practTrials = 2; % 20;  Hier bitte anpassen
+practTrials = 5 ; % 20;  Hier bitte anpassen
 
 % Risk parameter: Precision of confetti average
 concentration = [12, 16, 8]; % the first value is the concentration
@@ -127,15 +128,15 @@ predSpotRad = 10;
 tickWidth = 1;
 
 % Key codes
-s = 40; % Für Hamburg KbDemo in Konsole laufen lassen und s drücken um keyCode zu bekommen: Hier eventuell anpassen
-enter = 37; % Hamburg: Hier bitte anpassen
+s = 32; % Für Hamburg KbDemo in Konsole laufen lassen und s drücken um keyCode zu bekommen: Hier eventuell anpassen
+enter = 13; % Hamburg: Hier bitte anpassen
 
 % Keyboard device number
 % kbDev = 19;
 
 % Run task in debug mode with smaller window
 debug = false;
-
+ 
 % Show random confetti threshold for validation (don't use in experiment)
 showConfettiThreshold = false;
 
@@ -149,7 +150,7 @@ hidePtbCursor = true;
 rewMag = 0.1;
 
 % Specify data directory
-dataDirectory = '~/Dropbox/AdaptiveLearning/DataDirectory'; % '~/Projects/for/data/reward_pilot';  % Hier bitte anpassen
+dataDirectory = 'C:\Users\user\Desktop\AdaptiveLearning\Task\data'; % '~/Projects/for/data/reward_pilot';  % Hier bitte anpassen
 
 % Confetti cannon image rectangle determining the size of the cannon
 imageRect = [0 00 60 200];
